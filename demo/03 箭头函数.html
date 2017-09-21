@@ -4,17 +4,19 @@
     <meta charset="UTF-8">
     <title>Title</title>
     <script>
-        /*function show(){
+        /*
+        function show(){
             console.log(arguments);
         }
 
-        show(1,2,3);*/
+        show(1,2,3);
+        */
 
         var show = ()=>{
-            console.log(arguments);
+            console.log(arguments); //箭头函数中arguments不能用了
         };
 
-        show(1,2,3);
+        show(1,2,3);    //报错信息：Uncaught ReferenceError: arguments is not defined
     </script>
 </head>
 <body>

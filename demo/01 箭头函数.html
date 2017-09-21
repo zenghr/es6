@@ -11,13 +11,11 @@
         }
     </style>
     <script>
-
         window.onload = () =>{
             var oBox = document.getElementsByClassName('box')[0];
 
-            oBox.onclick = () => {
+            oBox.onclick = () => {  //  箭头函数中的this指向window
                 alert(this);
-
                 oBox.style.background = 'red';
             };
 

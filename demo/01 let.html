@@ -4,15 +4,16 @@
     <meta charset="UTF-8">
     <title>Title</title>
     <style>
-        *{
-            margin:0;
+        * {
+            margin: 0;
             padding: 0;
         }
-        li{
+
+        li {
             width: 100px;
             height: 40px;
-            background:yellowgreen;
-            margin-bottom:20px;
+            background: yellowgreen;
+            margin-bottom: 20px;
         }
     </style>
 </head>
@@ -28,16 +29,14 @@
 
 <script>
     //var用来计数的循环变量会泄露为全局变量
-    /*
-     var a = [];
-     for (var i = 0; i < 10; i++) {
-     a[i] = function () {
-     console.log(i);
-     };
-     }
-     console.log('a[6]的值为: ' + a[6]);    //function(){ console.log(i); }
-     a[6]();     //10
-     */
+    var a = [];
+    for (var i = 0; i < 10; i++) {
+        a[i] = function () {
+            console.log(i);
+        };
+    }
+    console.log('a[6]的值为: ' + a[6]);    //function(){ console.log(i); }
+    a[6]();     //10
 
     //let
     let b = [];
