@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        *{
+            margin:0;
+            padding: 0;
+        }
+        li{
+            width: 100px;
+            height: 40px;
+            background:yellowgreen;
+            margin-bottom:20px;
+        }
+    </style>
+</head>
+<body>
+<ul>
+    <li>1</li>
+    <li>2</li>
+    <li>3</li>
+    <li>4</li>
+    <li>5</li>
+</ul>
+</body>
+
+<script>
+    //var用来计数的循环变量会泄露为全局变量
+    /*
+     var a = [];
+     for (var i = 0; i < 10; i++) {
+     a[i] = function () {
+     console.log(i);
+     };
+     }
+     console.log('a[6]的值为: ' + a[6]);    //function(){ console.log(i); }
+     a[6]();     //10
+     */
+
+    //let
+    let b = [];
+    for (let k = 0; k < 10; k++) {
+        b[k] = function () {
+            console.log(k);
+        };
+    }
+    console.log('b[6]的值为: ' + b[6]);    //function(){ console.log(k); }
+    b[6]();     //6
+
+    //闭包方法
+    function abc(x){
+        var danji = function(e){
+            console.log(x);
+        };
+        return danji;
+    }
+
+    var aLi = document.getElementsByTagName('li');
+    for(var i=0; i<aLi.length; i++){
+        aLi[i].onclick = abc(i);
+    }
+</script>
+</html>

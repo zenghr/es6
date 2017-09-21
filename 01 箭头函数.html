@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .box{
+            width:200px;
+            height:200px;
+            background:#ccc;
+        }
+    </style>
+    <script>
+
+        window.onload = () =>{
+            var oBox = document.getElementsByClassName('box')[0];
+
+            oBox.onclick = () => {
+                alert(this);
+
+                oBox.style.background = 'red';
+            };
+
+        };
+    </script>
+</head>
+<body>
+    <div class="box"></div>
+</body>
+</html>

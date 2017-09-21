@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+        var a = 100;
+
+        var json = {
+            a:1,
+            b:2,
+            show:()=>{
+                alert(this.a);  //a=100
+            }
+        };
+
+        json.show();
+    </script>
+</head>
+<body>
+</body>
+</html>
